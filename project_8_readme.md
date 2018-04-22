@@ -24,12 +24,15 @@ if we run the command :
 ```    
 we see that the page takes 5 seconds to reload
 
+![alt text](./videos/bluesql.gif)
+
 Vulnerability #2: session hijacking
 
 If we log into a browser(chrome) on the green website, we can use the hacktools to recieve a current
 logged in session, and copy it so that when we go to the blue website with firefox, we can access hacktools again to change the sessionID to that of what we copied in the chrome session.
 The result gives us user access within the blue website without having to be logged in manually.
 
+![alt text](./videos/sessionhacking.gif)
 
 ## Green
 
@@ -42,6 +45,7 @@ however, if we login with the a nonexisting username and wrong password, we get 
 error class called 'failed' 
 
 
+![alt text](./videos/userenumerationgreen.gif)
 
 Vulnerability #2:
 if we submit an xss in the feedback section, the admin can check their feedback and activate the 
@@ -50,6 +54,7 @@ xss that was subimtted by an outside user
 <script>alert('an xss attack!');</script>
 ```    
 
+![alt text](<./videos/greenxss.gif>)
 ## Red
 
 Vulnerability #1: IDOR  
@@ -60,6 +65,7 @@ If we go to a persons webpage through find salesperson in the public website, we
 within the url to 10,and access that hidden user's page
 
 
+![alt text](./videos/IDORRED.gif)
 
 Vulnerability #2:
 
@@ -80,6 +86,9 @@ We first access the persons page with id 2, and see it is sherry trevino
 while still in the same session, we launch a malicous webpage like the one above, and we reload
 sherry's page and see that it is changed!
 
+
+
+![alt text](./videos/redCSRF.gif)
 ## Notes
 
 Describe any challenges encountered while doing the work
